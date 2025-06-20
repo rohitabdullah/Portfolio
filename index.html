@@ -4,26 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>R.A OFFICIAL | Cyber Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Source Code Pro', monospace;
+      font-family: 'Fira Code', monospace;
     }
     body {
-      background-color: #000;
-      color: #00ff00;
+      background-color: #0d0d0d;
+      color: #00ff88;
       padding: 20px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
     header {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
+      animation: fadeIn 2s ease-in-out;
     }
     header h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
     }
     header h1::after {
       content: '|';
@@ -33,66 +35,92 @@
       0%, 50%, 100% { opacity: 1; }
       25%, 75% { opacity: 0; }
     }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
     nav ul {
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 40px;
       list-style: none;
-      margin-top: 10px;
+      margin-top: 15px;
     }
     nav a {
-      color: #00ff00;
+      color: #00ff88;
       text-decoration: none;
-      transition: text-shadow 0.3s;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
     }
     nav a:hover {
-      text-shadow: 0 0 10px #00ff00;
+      color: #ffffff;
+      text-shadow: 0 0 10px #00ff88;
     }
     section {
-      margin-top: 40px;
-      max-width: 800px;
+      margin-top: 50px;
+      max-width: 850px;
       margin-left: auto;
       margin-right: auto;
+      animation: fadeIn 1.5s ease-in-out;
     }
     h2 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
+      font-size: 1.8rem;
+      color: #00ffaa;
+      margin-bottom: 12px;
     }
     .project {
-      border-left: 4px solid #00ff00;
-      padding-left: 15px;
-      margin-bottom: 20px;
+      background: #111;
+      border-left: 4px solid #00ff88;
+      padding: 15px 20px;
+      margin-bottom: 25px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .project:hover {
+      background: #1a1a1a;
     }
     .contact-form input, .contact-form textarea {
-      background: #000;
-      color: #00ff00;
-      border: 1px solid #00ff00;
-      padding: 10px;
+      background: #0d0d0d;
+      color: #00ff88;
+      border: 1px solid #00ffaa;
+      padding: 12px;
       width: 100%;
-      margin-top: 10px;
+      margin-top: 12px;
+      border-radius: 4px;
     }
     .contact-form button {
-      background: #00ff00;
+      background: #00ffaa;
       color: #000;
+      font-weight: bold;
       border: none;
-      padding: 10px 20px;
-      margin-top: 10px;
+      padding: 12px 25px;
+      margin-top: 15px;
       cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    .contact-form button:hover {
+      background: #00ddaa;
     }
     .socials {
       text-align: center;
-      margin-top: 20px;
+      margin-top: 30px;
     }
     .socials a {
-      color: #00ff00;
-      margin: 0 10px;
+      color: #00ff88;
+      margin: 0 15px;
       text-decoration: none;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+    .socials a:hover {
+      color: #ffffff;
     }
     footer {
-      margin-top: 40px;
+      margin-top: 50px;
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+      opacity: 0.8;
     }
   </style>
 </head>
@@ -110,22 +138,22 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I’m R.A, an ethical hacker, cybersecurity enthusiast, and developer who loves to turn creative ideas into secure and functional digital solutions. With a strong focus on privacy, automation, and efficiency, I build tools and systems that serve real-world needs — from individuals to organizations.</p>
+    <p>Hey there 👋 I'm R.A — a developer who lives at the crossroads of cybersecurity and creativity. From writing stealthy scripts to automating the digital grind, I turn complex problems into secure, functional, and beautiful code. My mission? To craft tech that feels as good as it performs.</p>
   </section>
 
   <section id="projects">
     <h2>Featured Projects</h2>
     <div class="project">
       <h3>CyberScraper</h3>
-      <p>A data-scraping tool using proxy rotation and user-agent spoofing. Ideal for ethical OSINT, penetration testing, and secure data gathering.</p>
+      <p>An intelligent scraping system using rotating proxies and headers. Designed for OSINT, pen-testing, and data mining — stealth mode, always on.</p>
     </div>
     <div class="project">
       <h3>TorNet Sessions</h3>
-      <p>Multiple browser session manager that utilizes independent Tor IPs for privacy-preserving browsing and testing.</p>
+      <p>Launch multiple browser instances through isolated Tor nodes. For when privacy isn’t optional — it’s priority.</p>
     </div>
     <div class="project">
       <h3>LinkVisitor</h3>
-      <p>A traffic simulator that mimics organic link clicks using rotating proxies. Useful for QA testing and traffic flow analysis.</p>
+      <p>A multi-threaded link visitor that mimics organic traffic using proxies and dynamic UA headers. Built for analysts, QA testers, and traffic simulation.</p>
     </div>
   </section>
 
@@ -134,7 +162,7 @@
     <form class="contact-form" onsubmit="submitForm(event)">
       <input type="text" id="name" placeholder="Your Name" required />
       <input type="email" id="email" placeholder="Your Email" required />
-      <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+      <textarea id="message" rows="5" placeholder="Say something cool..." required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
@@ -146,14 +174,14 @@
       <a href="https://facebook.com/ra.thecoecrafter" target="_blank">Facebook</a>
       <a href="https://wa.me/message/5F6LBLGL7AQDE1" target="_blank">WhatsApp</a>
     </div>
-    <p>&copy; 2025 R.A OFFICIAL — Securely Coded. Professionally Delivered.</p>
+    <p>&copy; 2025 R.A OFFICIAL — Coded with style. Secured with love.</p>
   </footer>
 
   <script>
     function submitForm(e) {
       e.preventDefault();
       const name = document.getElementById("name").value;
-      alert(`Thank you, ${name}. Your message has been received.`);
+      alert(`Thanks, ${name}! Your message is now in my encrypted inbox 🔐`);
     }
   </script>
 </body>
