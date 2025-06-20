@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>R.A OFFICIAL | Terminal Portfolio</title>
+  <title>R.A OFFICIAL | Cyber Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -21,6 +21,9 @@
     header {
       text-align: center;
       margin-bottom: 30px;
+    }
+    header h1 {
+      font-size: 2rem;
     }
     header h1::after {
       content: '|';
@@ -47,6 +50,13 @@
     }
     section {
       margin-top: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
     }
     .project {
       border-left: 4px solid #00ff00;
@@ -69,11 +79,15 @@
       margin-top: 10px;
       cursor: pointer;
     }
+    .socials {
+      text-align: center;
+      margin-top: 20px;
+    }
     .socials a {
       color: #00ff00;
       margin: 0 10px;
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
     footer {
       margin-top: 40px;
@@ -84,60 +98,62 @@
 </head>
 <body>
   <header>
-    <h1>root@ra:~$ ./welcome</h1>
+    <h1>R.A OFFICIAL — Ethical Hacker & Developer</h1>
     <nav>
       <ul>
-        <li><a href="#about">about()</a></li>
-        <li><a href="#projects">projects()</a></li>
-        <li><a href="#contact">contact()</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <section id="about">
-    <h2>~$ whoami</h2>
-    <p>R.A — code crafter, cyber wizard, network ghost. I bend logic into tools and scripts, walking the edge between creation and chaos.</p>
+    <h2>About Me</h2>
+    <p>Hello! I’m R.A, an ethical hacker, cybersecurity enthusiast, and developer who loves to turn creative ideas into secure and functional digital solutions. With a strong focus on privacy, automation, and efficiency, I build tools and systems that serve real-world needs — from individuals to organizations.</p>
   </section>
 
   <section id="projects">
-    <h2>~$ ls projects/</h2>
+    <h2>Featured Projects</h2>
     <div class="project">
       <h3>CyberScraper</h3>
-      <p>OSINT-enhanced scraper running proxies & stealth agents.</p>
+      <p>A data-scraping tool using proxy rotation and user-agent spoofing. Ideal for ethical OSINT, penetration testing, and secure data gathering.</p>
     </div>
     <div class="project">
       <h3>TorNet Sessions</h3>
-      <p>Browser shells with isolated Tor IPs — cloak and code.</p>
+      <p>Multiple browser session manager that utilizes independent Tor IPs for privacy-preserving browsing and testing.</p>
     </div>
     <div class="project">
       <h3>LinkVisitor</h3>
-      <p>Auto-clicking phantom with proxy cycling and view spoofing.</p>
+      <p>A traffic simulator that mimics organic link clicks using rotating proxies. Useful for QA testing and traffic flow analysis.</p>
     </div>
   </section>
 
   <section id="contact">
-    <h2>~$ nano contact.txt</h2>
+    <h2>Get in Touch</h2>
     <form class="contact-form" onsubmit="submitForm(event)">
-      <input type="text" id="name" placeholder="name=" required />
-      <input type="email" id="email" placeholder="email@domain" required />
-      <textarea id="message" rows="5" placeholder="// your message here"></textarea>
-      <button type="submit">send</button>
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
-  <footer>      <a href="https://www.youtube.com/@RA.TechTutorRohit" target="_blank">[YouTube]</a>
-      <a href="https://github.com/rohitabdullah" target="_blank">[GitHub]</a>
-      <a href="https://facebook.com/ra.thecoecrafter" target="_blank">[Facebook]</a>
-      <a href="https://wa.me/message/5F6LBLGL7AQDE1" target="_blank">[WhatsApp]</a>
+  <footer>
+    <div class="socials">
+      <a href="https://www.youtube.com/@RA.TechTutorRohit" target="_blank">YouTube</a>
+      <a href="https://github.com/rohitabdullah" target="_blank">GitHub</a>
+      <a href="https://facebook.com/ra.thecoecrafter" target="_blank">Facebook</a>
+      <a href="https://wa.me/message/5F6LBLGL7AQDE1" target="_blank">WhatsApp</a>
     </div>
-    <p>&copy; 2025 R.A OFFICIAL — terminal mode activated</p>
+    <p>&copy; 2025 R.A OFFICIAL — Securely Coded. Professionally Delivered.</p>
   </footer>
 
   <script>
     function submitForm(e) {
       e.preventDefault();
       const name = document.getElementById("name").value;
-      alert(`> Message received from ${name}. We'll be in touch.`);
+      alert(`Thank you, ${name}. Your message has been received.`);
     }
   </script>
 </body>
